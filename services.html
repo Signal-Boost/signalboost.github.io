@@ -1,0 +1,216 @@
+<!DOCTYPE html> <!-- Must be the very first line: tells the browser this is a modern HTML5 document -->
+
+<!-- =====================================================================
+     services.html — The SERVICES page (what you offer, in detail).
+     Header/footer/head are identical to index.html (see notes there).
+     To ADD a service: copy one whole <div class="service-detail"> ... </div>
+     block, paste it below the last one, and edit the text.
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Signal Boost</title>
+  <meta name="description" content="Strategy, marketing and operations consulting services from Signal Boost.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f2340'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23f2994a' font-family='Arial' font-weight='bold'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <nav class="container nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Signal<span>Boost</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-small">Book a Call</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h1>Focused help, where you need it most.</h1>
+        <p class="lead">Choose a defined project or an ongoing advisory arrangement. Every engagement starts with a free intro call.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE LIST ===================== -->
+    <section class="section">
+      <div class="container">
+
+        <!-- ---------- SERVICE 1 ----------
+             id="strategy" lets you link straight to this section with services.html#strategy -->
+        <div class="service-detail split reveal" id="strategy">
+          <div>
+            <span class="eyebrow">01</span>
+            <h2>Identity &amp; Access Management (IAM) Product Strategy</h2>      <!-- EDIT: service name -->
+            <p>(Overview)</p> <!-- EDIT -->
+            <p class="service-meta">Typical length: ?? weeks</p> <!-- EDIT: or delete the price -->
+          </div>
+          <div>
+            <h3>What's included</h3>
+            <ul class="check-list">
+              <li>An "enterprise readiness" assessment and roadmap</li>
+              <li>Build-vs-buy decisions on identity vendors</li>
+              <li>Reviews of how a product groups customers into organizations and accounts</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ---------- SERVICE 2 ---------- -->
+        <div class="service-detail split reveal" id="marketing">
+          <div>
+            <span class="eyebrow">02</span>
+            <h2>Fine-grained AI Authorization &amp; Collaboration Implementation Guidance</h2>
+            <p>(Overview)</p>
+            <p class="service-meta">Typical length: ?? weeks</p>
+          </div>
+          <div>
+            <h3>What's included</h3>
+            <ul class="check-list">
+              <li>Designing the permissions model</li>
+              <li>Planning a migration off homegrown role-based access</li>
+              <li>Sharing-and-permissions features for collaborative products</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ---------- SERVICE 3 ---------- -->
+        <div class="service-detail split reveal" id="operations">
+          <div>
+            <span class="eyebrow">03</span>
+            <h2>Identity, Security &amp; Privacy for Regulated AI Products</h2>
+            <p>(Overview)</p>
+            <p class="service-meta">Typical length: ?? weeks</p>
+          </div>
+          <div>
+            <h3>What's included</h3>
+            <ul class="check-list">
+              <li>Attribution guidance for Agents acting on behalf of users</li>
+              <li>Governance program review</li>
+              <li>Observability, controls, and risk management reviews</li>
+              <li>30-day follow-up check-in (?)</li> <!-- Additional services? -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- ---------- SERVICE 4 ---------- -->
+        <div class="service-detail split reveal" id="advisory">
+          <div>
+            <span class="eyebrow">04</span>
+            <h2>New-product Incubation &amp; Investment Cases</h2>
+            <p>(Overview)</p>
+            <p class="service-meta">Length: ??</p>
+          </div>
+          <div>
+            <h3>What's included</h3>
+            <ul class="check-list">
+              <li>Discovery sprints</li>
+              <li>Market sizing</li>
+              <li>Business cases for an executive or board "go/no-go" decision</li>
+              <li>Incubation consulting from paper idea to launch</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ---------- SERVICE 5 ---------- -->
+      <div class="service-detail split reveal" id="fractional">
+        <div>
+          <span class="eyebrow">05</span>
+          <h2>Fractional Product Leadership</h2>
+          <p>(Overview)</p>
+          <p class="service-meta">Length: ??</p>
+        </div>
+        <div>
+          <h3>What's included</h3>
+          <ul class="check-list">
+            <li>Fractional product lead</li>
+            <li>Analysis of a product department and opportunities for improvement</li>
+            <li>Software Development Lifecycle (SDLC) review and recommendations</li>
+          </ul>
+        </div>
+      </div>
+
+      </div> <!-- closes <div class="container"> -->
+    </section>
+
+    <!-- ===================== FAQ =====================
+         <details> + <summary> are built-in HTML elements: clicking the
+         <summary> shows/hides the rest. No JavaScript needed!
+         ================================================ -->
+    <section class="section section-soft">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="text-center">Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Do you work with businesses outside my area?</summary>
+            <p>Yes — most work happens over video calls, so I work with clients anywhere.</p>
+          </details>
+          <details>
+            <summary>How is pricing structured?</summary>
+            <p>Projects are fixed-price based on an agreed scope. Advisory is a flat monthly fee.</p>
+          </details>
+          <details>
+            <summary>What happens on the intro call?</summary>
+            <p>We talk about your goals and challenges. If it's a fit, I'll send a short proposal afterwards.</p>
+          </details>
+          <!-- To add a question: copy a <details>...</details> block and paste it here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CALL TO ACTION ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Not sure which fits?</h2>
+          <p>Book a free call and we'll figure out the right starting point together.</p>
+          <a href="contact.html" class="btn btn-primary">Book a call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">Signal<span>Boost</span></a>
+          <p style="margin-top: 10px;">Independent consulting for growing businesses.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="mailto:sam@signalboost.io">sam@signalboost.io</a></li>
+          <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Signal Boost. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

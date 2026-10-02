@@ -1,9 +1,214 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <title>My test page</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+<!DOCTYPE html> <!-- Must be the very first line: tells the browser this is a modern HTML5 document -->
+
+<!-- =====================================================================
+     index.html — The HOME page.
+     ---------------------------------------------------------------------
+     GitHub Pages automatically shows "index.html" when someone visits
+     your site's main address, so this file MUST be named index.html.
+
+     HTML basics:
+       <tag>content</tag>   <- most elements have an opening and closing tag
+       <tag attribute="value">  <- attributes add extra info (class, href...)
+       "less-than ! - -" ... "- - greater-than"  <- wraps a comment (like this block); browsers ignore it
+                                 (Never type the closing "- - >" inside a comment — it ends the comment early.)
+
+     Look for "EDIT:" comments — those mark text you should replace with
+     your own details.
+     ===================================================================== -->
+
+<html lang="en">               <!-- Root element; lang="en" = page is in English (helps screen readers & Google) -->
+
+<head>                         <!-- <head> holds info ABOUT the page; nothing here is shown on the page itself -->
+  <meta charset="UTF-8">       <!-- Character encoding: lets the page display any symbol (é, ✓, —) correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site scale properly on phones -->
+
+  <title>Signal Boost | Consulting</title> <!-- EDIT: Text shown in the browser tab and in Google results -->
+
+  <!-- Description shown under your link in Google search results. EDIT: keep it ~150 characters -->
+  <meta name="description" content="Signal Boost is an independent consultancy helping growing businesses sharpen their strategy, marketing and operations.">
+
+  <!-- "Open Graph" tags control the preview card when your link is shared on LinkedIn, Slack, etc. -->
+  <meta property="og:title" content="Signal Boost | Consulting">
+  <meta property="og:description" content="Independent consulting for growing businesses.">
+  <meta property="og:type" content="website">
+
+  <!-- Browser-tab icon. This uses an emoji-style SVG so you don't need an image file.
+       Later you can replace it with: <link rel="icon" href="images/favicon.png"> -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f2340'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23f2994a' font-family='Arial' font-weight='bold'>S</text></svg>">
+
+  <!-- Load the "Inter" font from Google Fonts. The first two lines speed up the download. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Link to OUR stylesheet. The path is relative: "css/styles.css" = the styles.css file inside the css folder -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>                         <!-- <body> holds everything visitors actually SEE -->
+
+  <!-- ===================== HEADER / NAVIGATION =====================
+       This same header block is copied onto every page. If you add a
+       new page or rename one, update the links on ALL four pages.
+       ================================================================ -->
+  <header class="site-header"> <!-- class="site-header" connects this to the .site-header rule in styles.css -->
+    <nav class="container nav-wrapper" aria-label="Main navigation"> <!-- <nav> = a group of navigation links; aria-label describes it for screen readers -->
+
+      <!-- The logo is just styled text that links back to the home page -->
+      <a href="index.html" class="logo">Signal<span>Boost</span></a> <!-- <span> lets us color "Boost" differently -->
+
+      <!-- Hamburger button: only visible on phones (see styles.css section 9).
+           main.js listens for clicks on it to open/close the menu. -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span>  <!-- Each .bar is one line of the ☰ icon -->
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- <ul> = unordered list; each <li> = one list item (a menu link) -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>          <!-- href = the page the link goes to -->
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-small">Book a Call</a></li> <!-- Styled as a button -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <main> wraps the unique content of this page (helps accessibility & SEO) -->
+  <main>
+
+    <!-- ===================== HERO (big intro banner) ===================== -->
+    <section class="hero">     <!-- <section> = a themed block of the page -->
+      <div class="container">  <!-- .container centers content and limits its width -->
+        <span class="eyebrow">Independent Consulting</span> <!-- Small label above the headline -->
+
+        <!-- <h1> = the page's main headline. Use only ONE <h1> per page (important for Google). -->
+        <h1>Clear strategy and hands-on help for growing businesses.</h1> <!-- EDIT: your core promise -->
+
+        <!-- class="lead" = larger intro paragraph -->
+        <p class="lead">
+          <!-- EDIT: one or two sentences on who you help and how -->
+          I'm a one-person consultancy, which means you work directly with me —
+          no hand-offs to junior staff, no bloated retainers. Just focused,
+          practical work that moves the needle.
+        </p>
+
+        <div class="btn-group">  <!-- Holds two buttons side by side -->
+          <a href="contact.html" class="btn btn-primary">Book a free intro call</a>
+          <a href="services.html" class="btn btn-outline">See services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES PREVIEW ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">  <!-- Centers the heading text -->
+          <span class="eyebrow">How I help</span>
+          <h2>Services built around your goals</h2> <!-- <h2> = a section heading -->
+          <p class="lead">Every engagement is tailored, but most clients start with one of these.</p>
+        </div>
+
+        <!-- .grid lays the cards out in columns (1 on phones, up to 3 on desktop) -->
+        <!-- class="card reveal": "card" styles the box, "reveal" makes it fade in on scroll (main.js) -->
+        <div class="grid" style="margin-top: 40px;"> <!-- style="..." = a one-off inline style for this element only -->
+
+          <article class="card reveal"> <!-- <article> = a self-contained piece of content -->
+            <div class="card-icon" aria-hidden="true">◎</div> <!-- aria-hidden: screen readers skip decorative icons -->
+            <h3>Strategy</h3>                                  <!-- EDIT -->
+            <p>Get clarity on where to focus, what to stop doing, and how to measure progress.</p> <!-- EDIT -->
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">↗</div>
+            <h3>Marketing &amp; Growth</h3> <!-- "&amp;" is how you write an "&" symbol safely in HTML -->
+            <p>Sharpen your positioning and build a repeatable way to reach the right customers.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">⚙</div>
+            <h3>Operations</h3>
+            <p>Streamline processes and tools so your team spends time on work that matters.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section section-soft"> <!-- section-soft = light gray background -->
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow">Process</span>
+          <h2>How working together works</h2>
+        </div>
+
+        <div class="grid" style="margin-top: 40px;">
+          <div class="reveal">                     <!-- A plain <div> is a generic container -->
+            <div class="step-number">01</div>
+            <h3>Intro call</h3>
+            <p>A free 30-minute conversation to understand where you are and where you want to go.</p>
+          </div>
+          <div class="reveal">
+            <div class="step-number">02</div>
+            <h3>Proposal</h3>
+            <p>A clear written plan with scope, timeline and a fixed price — no surprises.</p>
+          </div>
+          <div class="reveal">
+            <div class="step-number">03</div>
+            <h3>Do the work</h3>
+            <p>We work side by side, with regular check-ins and practical deliverables you can use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CALL TO ACTION ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">  <!-- Dark navy box that grabs attention -->
+          <h2>Ready to talk?</h2>
+          <p>Pick a time that works for you — the first call is free and there's no obligation.</p>
+          <!-- EDIT: replace YOUR-USERNAME with your Calendly link.
+               target="_blank" opens it in a new tab; rel="noopener" is a security best practice for new tabs. -->
+          <a href="https://calendly.com/YOUR-USERNAME" class="btn btn-primary" target="_blank" rel="noopener">Book a call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER =====================
+       Also copied onto every page — update all pages if you change it.
+       ================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">  <!-- Flexbox row: brand on the left, links on the right -->
+        <div>
+          <a href="index.html" class="logo">Signal<span>Boost</span></a>
+          <p style="margin-top: 10px;">Independent consulting for growing businesses.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="footer-links">
+          <!-- "mailto:" links open the visitor's email app. EDIT: your email -->
+          <li><a href="mailto:sam@signalboost.io">sam@signalboost.io</a></li>
+          <!-- EDIT: your LinkedIn profile URL -->
+          <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <!-- &copy; = the © symbol. The empty <span id="year"> is filled in by main.js -->
+        <p>&copy; <span id="year"></span> Signal Boost. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load our JavaScript LAST-ish. "defer" = wait until the page's HTML is fully loaded, then run it. -->
+  <script src="js/main.js" defer></script>
+</body>
 </html>

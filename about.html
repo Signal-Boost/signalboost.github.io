@@ -1,0 +1,174 @@
+<!DOCTYPE html> <!-- Must be the very first line: tells the browser this is a modern HTML5 document -->
+
+<!-- =====================================================================
+     about.html — The ABOUT page (your story & background).
+     The <head>, header and footer are the same as index.html — see that
+     file for line-by-line notes on those parts. Comments here focus on
+     what's new on this page. Search for "EDIT:" to find text to replace.
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Signal Boost</title> <!-- Each page gets its own title for the browser tab & Google -->
+  <meta name="description" content="Meet the consultant behind Signal Boost — background, approach and values.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f2340'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23f2994a' font-family='Arial' font-weight='bold'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Same shared stylesheet as every page -->
+</head>
+
+<body>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <nav class="container nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Signal<span>Boost</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>       <!-- main.js will highlight this one on this page -->
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-small">Book a Call</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HEADER (small banner) ===================== -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">About</span>
+        <h1>Hi, I'm Sam.</h1> <!-- EDIT: your name -->
+        <p class="lead">I help small and mid-sized businesses turn good ideas into focused plans — and then help carry them out.</p> <!-- EDIT -->
+      </div>
+    </section>
+
+    <!-- ===================== STORY + PHOTO (two columns) ===================== -->
+    <section class="section">
+      <div class="container split"> <!-- .split = two equal columns on desktop, stacked on phones -->
+
+        <!-- LEFT COLUMN: your story -->
+        <div class="reveal">
+          <h2>My story</h2>
+          <!-- EDIT: Replace these paragraphs with your real background -->
+          <p>
+            Before starting Signal Boost, I spent years working inside growing
+            companies, seeing first-hand how easily great teams get pulled in
+            too many directions.
+          </p>
+          <p>
+            I started this consultancy to offer something simple: senior-level
+            thinking, delivered personally, at a scale that fits growing
+            businesses.
+          </p>
+          <p>
+            When you hire Signal Boost, you get me — from the first call to the
+            final deliverable.
+          </p>
+        </div>
+
+        <!-- RIGHT COLUMN: your photo -->
+        <div class="reveal">
+          <!-- EDIT: To use a real photo:
+               1. Create a folder called "images" next to index.html
+               2. Put your photo in it, e.g. images/headshot.jpg
+               3. Delete the <div class="photo-placeholder"> below and un-comment the <img> line
+               "alt" text describes the image for screen readers and shows if the image fails to load. -->
+          <!-- <img src="images/headshot.jpg" alt="Portrait of Austin, founder of Signal Boost" class="headshot"> -->
+          <div class="photo-placeholder">Your headshot goes here<br>(see comment in about.html)</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== VALUES / APPROACH ===================== -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow">Approach</span>
+          <h2>What you can expect</h2>
+        </div>
+        <div class="grid" style="margin-top: 40px;">
+          <!-- EDIT: change these to your own values -->
+          <article class="card reveal">
+            <h3>Direct access</h3>
+            <p>You work with me personally — no account managers or hand-offs.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Practical over theoretical</h3>
+            <p>Recommendations you can act on Monday morning, not 80-page decks.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Clear pricing</h3>
+            <p>Fixed-scope projects with transparent pricing agreed up front.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE (checkmark list) ===================== -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <h2>Background</h2>
+          <p>A few highlights from my experience:</p>
+        </div>
+        <div class="reveal">
+          <!-- class="check-list" swaps bullet points for orange checkmarks (styles.css) -->
+          <ul class="check-list">
+            <!-- EDIT: add, remove, or change these lines -->
+            <li>X+ years in strategy, marketing and operations roles</li>
+            <li>Worked with clients in [industry], [industry] and [industry]</li>
+            <li>Certifications or degrees you want to highlight</li>
+            <li>Based in [City] — working with clients everywhere</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CALL TO ACTION ===================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Let's see if we're a good fit</h2>
+          <p>A quick, free conversation is the best way to find out.</p>
+          <a href="contact.html" class="btn btn-primary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">Signal<span>Boost</span></a>
+          <p style="margin-top: 10px;">Independent consulting for growing businesses.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="mailto:sam@signalboost.io">sam@signalboost.io</a></li>
+          <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Signal Boost. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

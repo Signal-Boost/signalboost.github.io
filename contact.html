@@ -1,0 +1,138 @@
+<!DOCTYPE html> <!-- Must be the very first line: tells the browser this is a modern HTML5 document -->
+
+<!-- =====================================================================
+     contact.html — The CONTACT page, with your Calendly booking calendar.
+     ---------------------------------------------------------------------
+     GitHub Pages only hosts "static" files — it can't receive form
+     submissions. So instead of a form, visitors book directly through
+     Calendly (a free scheduling service).
+
+     SETUP (one-time):
+       1. Create a free account at https://calendly.com
+       2. Create an event type, e.g. "30 Minute Intro Call"
+       3. Copy its link, e.g. https://calendly.com/austin-signalboost/intro
+       4. Replace EVERY "https://calendly.com/YOUR-USERNAME" in this file
+          (and in index.html) with your link.
+     ===================================================================== -->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Signal Boost</title>
+  <meta name="description" content="Book a free intro call with Signal Boost.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f2340'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23f2994a' font-family='Arial' font-weight='bold'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ===================== HEADER (same on every page) ===================== -->
+  <header class="site-header">
+    <nav class="container nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">Signal<span>Boost</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-small">Book a Call</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HEADER ===================== -->
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Let's talk.</h1>
+        <p class="lead">Book a free 30-minute intro call below, or reach out by email if you prefer.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split" style="align-items: start;"> <!-- align-items: start = columns line up at the top -->
+
+        <!-- ===================== LEFT: contact details ===================== -->
+        <div>
+          <h2>Other ways to reach me</h2>
+
+          <div class="contact-item">
+            <h3>Email</h3>
+            <!-- mailto: opens the visitor's email app with your address filled in. EDIT: your email -->
+            <p><a href="mailto:sam@signalboost.io">sam@signalboost.io</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">Connect with me</a></p> <!-- EDIT -->
+          </div>
+
+          <div class="contact-item">
+            <h3>Based in</h3>
+            <p>[Your City] · Working with clients remotely everywhere</p> <!-- EDIT -->
+          </div>
+
+          <div class="contact-item">
+            <h3>Response time</h3>
+            <p>I reply to every message within one business day.</p>
+          </div>
+
+          <!-- Simple fallback button in case the calendar doesn't load -->
+          <a href="https://calendly.com/YOUR-USERNAME" class="btn btn-outline" target="_blank" rel="noopener">Open booking page in a new tab</a>
+        </div>
+
+        <!-- ===================== RIGHT: Calendly calendar ===================== -->
+        <div>
+          <!-- Calendly's "inline embed": this empty box gets replaced by the booking calendar.
+               data-url = YOUR Calendly link (EDIT this!)
+               The extra "?hide_gdpr_banner=1&primary_color=f2994a" part hides a cookie banner
+               and makes Calendly's buttons match our orange accent color. -->
+          <div class="calendly-inline-widget"
+               data-url="https://calendly.com/YOUR-USERNAME?hide_gdpr_banner=1&primary_color=f2994a"
+               style="min-width: 300px; height: 700px; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden;">
+          </div>
+          <!-- This script (provided by Calendly) finds the box above and loads the calendar into it.
+               "async" means it loads in the background without slowing down the rest of the page. -->
+          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (same on every page) ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">Signal<span>Boost</span></a>
+          <p style="margin-top: 10px;">Independent consulting for growing businesses.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="mailto:sam@signalboost.io">sam@signalboost.io</a></li>
+          <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Signal Boost. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
