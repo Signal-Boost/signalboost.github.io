@@ -156,6 +156,10 @@ img {
   gap: 28px;                    /* Space between grid items                  */
 }
 
+/* .grid-2 = always two columns (e.g. 4 cards as a neat 2×2).
+   Becomes one column on phones — see section 9. */
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
 /* Two-column layout (text + image, etc.) */
 .split {
   display: grid;
@@ -295,6 +299,14 @@ img {
 }
 .hero h1 { max-width: 780px; margin-bottom: 1.25rem; }
 .hero .lead { margin-bottom: 0.5rem; }
+
+/* PROOF LINE = small credibility text under the hero buttons */
+.proof-line {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+.proof-line strong { color: var(--color-navy); } /* Company names in navy */
 
 /* PAGE HEADER = smaller banner at the top of About/Services/Contact */
 .page-header {
@@ -481,6 +493,7 @@ img {
 @media (max-width: 820px) {
   .section { padding: 60px 0; }
   .split { grid-template-columns: 1fr; gap: 36px; } /* Stack the two columns */
+  .grid-2 { grid-template-columns: 1fr; }             /* 2×2 grid becomes one column */
 
   .nav-toggle { display: block; } /* Show the hamburger button              */
 

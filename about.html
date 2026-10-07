@@ -11,8 +11,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Signal Boost</title> <!-- Each page gets its own title for the browser tab & Google -->
-  <meta name="description" content="Meet the consultant behind Signal Boost — background, approach and values.">
+  <title>About Sam | Signal Boost</title> <!-- Each page gets its own title for the browser tab & Google -->
+  <meta name="description" content="Sam leads Signal Boost: product strategy for identity and access management, AI authorization, security and new product launches.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230f2340'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23f2994a' font-family='Arial' font-weight='bold'>S</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,54 +45,78 @@
       <div class="container">
         <span class="eyebrow">About</span>
         <h1>Hi, I'm Sam.</h1> <!-- EDIT: your name -->
-        <p class="lead">I combine the interests of millions of users with the goals of the organization to create digital products and experiences that make lasting impacts.</p> <!-- EDIT -->
+        <p class="lead">I help SaaS and AI companies build secure, enterprise-ready products, and I get new products off the ground. I've led identity and security products at Okta / Auth0 and OneTrust, including the preview launch of Okta Fine Grained Authorization, now a product line with tens of millions in annual revenue.</p> <!-- EDIT -->
       </div>
     </section>
 
-    <!-- ===================== VALUES / APPROACH ===================== -->
+    <!-- ===================== SKILLS (two checkmark lists) =====================
+         .split = two columns on desktop, stacked on phones.
+         class="check-list" swaps bullet points for orange checkmarks (styles.css).
+         To add a skill, copy one <li>...</li> line and edit it.
+         ========================================================================= -->
     <section class="section">
       <div class="container">
         <div class="text-center">
+          <span class="eyebrow">Skills</span>
+          <h2>What I bring to your team</h2>
+        </div>
+        <div class="split" style="margin-top: 40px; align-items: start;">
+          <div class="reveal">
+            <h3>Identity &amp; security</h3>
+            <ul class="check-list">
+              <li>Identity and access management (IAM)</li>
+              <li>Customer identity (CIAM) and B2B multi-tenant accounts</li>
+              <li>Single sign-on (SSO) and enterprise readiness</li>
+              <li>Fine-grained, relationship-based authorization and permissions design</li>
+              <li>AI agent identity and access</li>
+              <li>Security, privacy and governance for regulated AI (healthcare, finance)</li>
+              <li>Decentralized identity and verifiable credentials</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3>Product</h3>
+            <ul class="check-list">
+              <li>Product strategy and roadmapping</li>
+              <li>New product incubation, from idea to launch</li>
+              <li>Market research, market sizing and business cases</li>
+              <li>APIs, integrations and developer platforms</li>
+              <li>Building product and engineering teams</li>
+              <li>Agile delivery and software development lifecycle (SDLC) improvement</li>
+              <li>Fast delivery: launched 7 products in 2 months</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW I WORK =====================
+         Themes taken from what Sam's colleagues highlighted in recommendations.
+         ====================================================== -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="text-center">
           <span class="eyebrow">Approach</span>
-          <h2>What you can expect</h2>
+          <h2>How I work</h2>
         </div>
         <div class="grid" style="margin-top: 40px;">
-          <!-- EDIT: change these to your own values -->
           <article class="card reveal">
-            <h3>Direct access</h3>
-            <p>You work with me personally — no account managers or hand-offs.</p>
+            <h3>Users, engineering and business, aligned</h3>
+            <p>I balance what end users need, what your team can build, and what the business needs to win.</p>
           </article>
           <article class="card reveal">
-            <h3>Practical over theoretical</h3>
-            <p>Recommendations you can act on Monday morning, not 80-page decks.</p>
+            <h3>Clear communication</h3>
+            <p>Plain-language updates, managed expectations, and context your team can act on.</p>
           </article>
           <article class="card reveal">
-            <h3>Clear pricing</h3>
-            <p>Fixed-scope projects with transparent pricing agreed up front.</p>
+            <h3>Quality work, on time</h3>
+            <p>Practical process and accountability that keep projects moving and ship quality results.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================== EXPERIENCE (checkmark list) ===================== -->
-    <section class="section section-soft">
-      <div class="container split">
-        <div class="reveal">
-          <h2>Background</h2>
-          <p>A few highlights from my experience:</p>
-        </div>
-        <div class="reveal">
-          <!-- class="check-list" swaps bullet points for orange checkmarks (styles.css) -->
-          <ul class="check-list">
-            <!-- EDIT: add, remove, or change these lines -->
-            <li>X+ years in strategy, marketing and operations roles</li>
-            <li>Worked with clients in [industry], [industry] and [industry]</li>
-            <li>Certifications or degrees you want to highlight</li>
-            <li>Based in [City] — working with clients everywhere</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- The call-to-action below uses padding-top: 0, so give it space after the gray section -->
+    <div style="height: 80px;"></div>
 
     <!-- ===================== CALL TO ACTION ===================== -->
     <section class="section" style="padding-top: 20;">
@@ -113,7 +137,7 @@
       <div class="footer-grid">
         <div>
           <a href="index.html" class="logo">Signal<span>Boost</span></a>
-          <p style="margin-top: 10px;">Independent consulting for growing businesses.</p>
+          <p style="margin-top: 10px;">Identity, security &amp; AI product consulting.</p>
         </div>
         <ul class="footer-links">
           <li><a href="about.html">About</a></li>
@@ -121,8 +145,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <ul class="footer-links">
-          <li><a href="mailto:sam@signalboost.io">sam@signalboost.io</a></li>
-          <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:sam@signalboost.io">info@signalboost.io</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
